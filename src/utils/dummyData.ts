@@ -1,4 +1,4 @@
-const getRandomImage = gender => {
+const getRandomImage = (gender: string) => {
   const num = Math.floor(Math.random() * 99) + 1;
   return `https://randomuser.me/api/portraits/${gender}/${num}.jpg`;
 };

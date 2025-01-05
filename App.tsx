@@ -1,10 +1,11 @@
-import {Text, View} from 'react-native';
-import React from 'react';
+import React from "react";
+import AppNavigation from "./src/navigation/Navigation";
+
 
 export default function App() {
   return (
-    <View>
-      <Text>Testing</Text>
-    </View>
+    <React.Fragment>
+      <AppNavigation />
+    </ React.Fragment >
   );
 }
