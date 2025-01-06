@@ -6,7 +6,7 @@ import {
 
 export const navigationRef = createNavigationContainerRef();
 
-export function navigate(routeName: string, params: object | undefined) {
+export function navigate(routeName: string, params?: object | undefined) {
   if (navigationRef.isReady()) {
     navigationRef.dispatch(CommonActions.navigate(routeName, params));
   }
