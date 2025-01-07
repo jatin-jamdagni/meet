@@ -19,7 +19,7 @@ interface LiveMeetStore {
     removeParticipant: (participant: Participant) => void;
     updateParticipant: (participant: Participant) => void;
     setStreamUrl: ({ participantId, streamUrl }: { participantId: string, streamUrl: string }) => void;
-    toogle: (type: 'mic' | 'video') => void;
+    toggle: (type: 'mic' | 'video') => void;
 }
 
 export const useLiveMeetStore = create<LiveMeetStore>((set, get) => ({
@@ -67,7 +67,7 @@ export const useLiveMeetStore = create<LiveMeetStore>((set, get) => ({
         );
         set({ participants: updatedParticipants });
     },
-    toogle: (type: 'mic' | 'video') => {
+    toggle: (type: 'mic' | 'video') => {
         if (type === 'mic') {
             set(state => ({ micOn: !state.micOn }))
         }

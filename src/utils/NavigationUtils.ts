@@ -12,7 +12,7 @@ export function navigate(routeName: string, params?: object | undefined) {
   }
 }
 
-export function replace(routeName: string, params: object | undefined) {
+export function replace(routeName: string, params?: object | undefined) {
   if (navigationRef.isReady()) {
     navigationRef.dispatch(StackActions.replace(routeName, params));
   }
